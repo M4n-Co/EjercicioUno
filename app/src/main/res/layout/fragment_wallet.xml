@@ -100,7 +100,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clMenuWallet"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -109,9 +109,10 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clMovements"
-                android:layout_width="100dp"
+                android:layout_width="81dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/glMenuWallet1"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
@@ -128,10 +129,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_semi_bold"
                     android:text="Movimientos"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:textSize="11sp"
+                    android:textSize="9sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/btnMovements" />
@@ -139,9 +140,10 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clBuy"
-                android:layout_width="100dp"
+                android:layout_width="81dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/clMovements"
+                app:layout_constraintStart_toEndOf="@id/glMenuWallet1"
+                app:layout_constraintEnd_toStartOf="@id/glMenuWallet2"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
@@ -158,10 +160,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_semi_bold"
                     android:text="Comprar"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:textSize="11sp"
+                    android:textSize="9sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/btnBuy" />
@@ -169,9 +171,10 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clSell"
-                android:layout_width="100dp"
+                android:layout_width="81dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/clBuy"
+                app:layout_constraintStart_toEndOf="@id/glMenuWallet2"
+                app:layout_constraintEnd_toStartOf="@id/glMenuWallet3"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
@@ -188,10 +191,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_semi_bold"
                     android:text="vender"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:textSize="11sp"
+                    android:textSize="9sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/btnSell" />
@@ -199,10 +202,10 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clServicesPay"
-                android:layout_width="100dp"
+                android:layout_width="81dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/clSell"
+                app:layout_constraintStart_toEndOf="@id/glMenuWallet3"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
@@ -219,14 +222,47 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_semi_bold"
                     android:text="Pago de servicios"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:textSize="11sp"
+                    android:textSize="9sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/btnServicesPay" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glMenuWallet1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glMenuWallet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glMenuWallet3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -267,9 +303,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semi_bold"
                     android:text="Cuenta en Dólares"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semi_bold"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -299,8 +335,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
                             android:layout_marginTop="10dp"
-                            android:text="Número de cuenta"
                             android:fontFamily="@font/poppins_semi_bold"
+                            android:text="Número de cuenta"
                             android:textSize="11sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -312,9 +348,9 @@
                             android:layout_marginStart="24dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/poppins_semi_bold"
                             android:text="12371111115512"
                             android:textColor="@color/primary_color"
-                            android:fontFamily="@font/poppins_semi_bold"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -355,8 +391,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
                             android:layout_marginTop="10dp"
-                            android:text="Número de cuenta"
                             android:fontFamily="@font/poppins_semi_bold"
+                            android:text="Número de cuenta"
                             android:textSize="11sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -368,9 +404,9 @@
                             android:layout_marginStart="24dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/poppins_semi_bold"
                             android:text="$1,000 USD"
                             android:textColor="@color/primary_color"
-                            android:fontFamily="@font/poppins_semi_bold"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -388,51 +424,61 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddDollarBalance"
+                    style="?attr/materialButtonToggleGroupStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Agregar Saldo"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:cornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/glDollarAccount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/crBalanceDollar"
+                    app:strokeColor="@color/primary_color" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnWithdrawDollar"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Retirar saldo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_color"
+                    android:textSize="13sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:cornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/glDollarAccount"
+                    app:layout_constraintTop_toBottomOf="@+id/crBalanceDollar"
+                    app:strokeColor="@color/primary_color" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glDollarAccount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintGuide_percent="0.50"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/crBalanceDollar">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnAddDollarBalance"
-                        style="?attr/materialButtonToggleGroupStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="Agregar Saldo"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textSize="15sp"
-                        app:cornerRadius="50dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:strokeColor="@color/primary_color" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnWithdrawDollar"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="Retirar saldo"
-                        android:textAllCaps="false"
-                        android:textColor="@color/primary_color"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textSize="15sp"
-                        app:cornerRadius="50dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/btnAddDollarBalance"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:strokeColor="@color/primary_color" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
@@ -442,10 +488,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:elevation="15dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:elevation="15dp"
             app:cardBackgroundColor="@color/neutral_color_three"
             app:cardCornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -463,9 +509,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semi_bold"
                     android:text="Cuenta en Pesos"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semi_bold"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -495,8 +541,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
                             android:layout_marginTop="10dp"
-                            android:text="Número de cuenta"
                             android:fontFamily="@font/poppins_semi_bold"
+                            android:text="Número de cuenta"
                             android:textSize="11sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -508,9 +554,9 @@
                             android:layout_marginStart="24dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/poppins_semi_bold"
                             android:text="54879032123567"
                             android:textColor="@color/primary_color"
-                            android:fontFamily="@font/poppins_semi_bold"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -551,8 +597,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
                             android:layout_marginTop="10dp"
-                            android:text="Número de cuenta"
                             android:fontFamily="@font/poppins_semi_bold"
+                            android:text="Número de cuenta"
                             android:textSize="11sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -564,9 +610,9 @@
                             android:layout_marginStart="24dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/poppins_semi_bold"
                             android:text="$1,000 MXN"
                             android:textColor="@color/primary_color"
-                            android:fontFamily="@font/poppins_semi_bold"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -584,51 +630,61 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddPesosBalance"
+                    style="?attr/materialButtonToggleGroupStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Agregar Saldo"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:cornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/glPesosAccount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/crBalancePesos"
+                    app:strokeColor="@color/primary_color" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnWithdrawPesos"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Retirar saldo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_color"
+                    android:textSize="13sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:cornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/glPesosAccount"
+                    app:layout_constraintTop_toBottomOf="@+id/crBalancePesos"
+                    app:strokeColor="@color/primary_color" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glPesosAccount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintGuide_percent="0.50144094"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/crBalancePesos">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnAddPesosBalance"
-                        style="?attr/materialButtonToggleGroupStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="Agregar Saldo"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textSize="15sp"
-                        app:cornerRadius="50dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:strokeColor="@color/primary_color" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnWithdrawPesos"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="Retirar saldo"
-                        android:textAllCaps="false"
-                        android:textColor="@color/primary_color"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textSize="15sp"
-                        app:cornerRadius="50dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/btnAddPesosBalance"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:strokeColor="@color/primary_color" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    app:layout_constraintTop_toBottomOf="@id/crBalancePesos" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

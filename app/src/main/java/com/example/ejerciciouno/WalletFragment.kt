@@ -27,15 +27,31 @@ class WalletFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val paint = mBinding.tvDollarAccount.paint
-        val width = paint.measureText(mBinding.tvDollarAccount.text.toString())
-        val textShader: Shader = LinearGradient(0f, 0f, width, mBinding.tvDollarAccount.textSize,
+        val paintDollar = mBinding.tvDollarAccount.paint
+        val widthDollar = paintDollar.measureText(mBinding.tvDollarAccount.text.toString())
+        val textShaderDollar: Shader = LinearGradient(0f, 0f, widthDollar, mBinding.tvDollarAccount.textSize,
             intArrayOf(
                 Color.parseColor("#FF065FC1"),
                 Color.parseColor("#FF02B07F"),
                 Color.parseColor("#FF00E554")
             ), null, Shader.TileMode.REPEAT)
 
-        mBinding.tvDollarAccount.paint.shader = textShader
+        mBinding.tvDollarAccount.paint.shader = textShaderDollar
+
+        val paintPeso = mBinding.tvPesosAccount.paint
+        val widthPeso = paintPeso.measureText(mBinding.tvPesosAccount.text.toString())
+        val textShaderPeso: Shader = LinearGradient(0f, 0f, widthPeso, mBinding.tvPesosAccount.textSize,
+            intArrayOf(
+                Color.parseColor("#FF065FC1"),
+                Color.parseColor("#FF02B07F"),
+                Color.parseColor("#FF00E554")
+            ), null, Shader.TileMode.REPEAT)
+
+        mBinding.tvPesosAccount.paint.shader = textShaderPeso
+
+        mBinding.clServicesPay.setOnClickListener {
+            val dialog = ADFragment()
+            dialog.show(childFragmentManager, "")
+        }
     }
 }
